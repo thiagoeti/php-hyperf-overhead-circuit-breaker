@@ -15,7 +15,7 @@ This test execute calc of Fibonacci to show how HyperF behaves with overload, af
 composer create-project hyperf/hyperf-skeleton "project"
 ```
 
-#### Install - Watcher
+#### Watcher - Install
 
 ```console
 composer require hyperf/watcher --dev
@@ -36,7 +36,7 @@ Set a time limit of one minute just for testing.
 set_time_limit(60);
 ```
 
-> Path: project/bin/hyperf.php
+> path: /project/bin/hyperf.php
 
 ## HyperF - APP
 
@@ -53,7 +53,7 @@ return [
 ];
 ```
 
-> Path: project/config/autoload/server.php
+> path: /project/config/autoload/server.php
 
 #### APP - Router
 
@@ -62,7 +62,7 @@ Router::addRoute(['GET', 'POST'], '/stress', 'App\Controller\ControllerOverhead@
 Router::addRoute(['GET', 'POST'], '/data', 'App\Controller\ControllerOverhead@data');
 ```
 
-> Path: project/config/routes.php
+> path: /project/config/routes.php
 
 #### APP - Controller - Overhead
 
@@ -103,7 +103,7 @@ class ControllerOverhead
 }
 ```
 
-> Path: project/app/Controller/ControllerOverhead.php
+> path: /project/app/Controller/ControllerOverhead.php
 
 ## Execute
 
