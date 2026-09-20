@@ -51,7 +51,7 @@ Regra de separação entre `README.md` e `CLAUDE.md` projeto.
 Tabelas são o guia rápido do agente. Nesta ordem:
 
 1. **Tabela de Especificações (`.specs/`)**: Listar todos os arquivos de especificação acompanhados de um breve resumo, ordenados por relevância.
-2. **Tabela de Arquivos Internos (`.claude/`)**: Listar todos os arquivos de configuração do agente com uma breve descrição, ordenados por prioridade.
+2. **Tabela de Comandos e Arquivos (`.claude/`)**: Listar todos os comandos e arquivos de configuração do agente com uma breve descrição, ordenados por prioridade.
 
 **Execução:**
 
@@ -77,6 +77,19 @@ Uma spec por **assunto**, nunca um arquivo único que junta tudo.
 
 ---
 
+## Skills do Projeto — `.claude/skills/`
+
+Uma pasta por skill, `.claude/skills/<nome>/SKILL.md`. O agente registra a skill pelo nome da pasta.
+
+Modelo:
+
+| Skill | Quando aplicar |
+|---|---|
+| `/deploy` | Git, commit, push, publicação — o workflow do `git.sh`; o script mora na skill e a raiz é um symlink para ele |
+| `/profile` | Todo prompt: escopo fechado, resposta direta, pergunta única na ambiguidade |
+
+---
+
 ## Regra resumida
 
 | Pergunta | README.md | CLAUDE.md |
@@ -87,5 +100,5 @@ Uma spec por **assunto**, nunca um arquivo único que junta tudo.
 | "Como um dev/agente trabalha nisso?" | ❌ | ✅ |
 | "Qual a arquitetura e as decisões de design?" | ❌ | ✅ |
 | "Onde ficam as specs (`.specs/`)?" | ❌ | ✅ |
-| "Quais skills internas o agente tem?" | ❌ | ✅ |
+| "Quais skills o projeto tem e quando cada uma aplica?" | ❌ | ✅ |
 | "Qual é o workflow de deploy?" | ❌ | ✅ |
